@@ -1,0 +1,1 @@
+for file in ./*.nd2 ; do python nanotube_threshold.py $file ; done
