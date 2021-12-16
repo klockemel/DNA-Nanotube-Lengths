@@ -1,1 +1,0 @@
-for file in ./*.tif ; do python tif_nanotube_threshold.py $file ; done
