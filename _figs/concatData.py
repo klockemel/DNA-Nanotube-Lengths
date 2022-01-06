@@ -3,9 +3,6 @@ __email__ = "klocke@ucr.edu"
 __version__ = "1.0"
 
 
-## before using confirm whether or not perim is legnth, or if it does need to be divided by 2!
-
-
 import sys
 import os
 import pandas as pd
