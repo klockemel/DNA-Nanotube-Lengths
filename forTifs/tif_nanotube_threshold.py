@@ -11,9 +11,9 @@ The "subtractBackground" function can be bypassed if the images are high quality
 bright nanotubes compared to background, etc. The script does run more slowly with this function in use, but allows for processing images
 with some of the issues mention in the previous sentence.
 
-Call the script with "python nanotube_threshold.py $nd2_filename" where $nd2_filename is your file. 
+Call the script with "python nanotube_threshold.py $tif_filename" where $tif_filename is your file. 
 Call the script on multiple images in a folder with "bash run_nanotubeThreshold_allFilesInDirectory.sh". 
-Must have both files in the same directory as the .nd2 files.'''
+Must have both files in the same directory as the .tif files.'''
 
 
 import sys
@@ -22,7 +22,6 @@ import numpy as np
 import pandas as pd
 import imageio as io
 import scipy.ndimage as ndi
-from nd2reader import ND2Reader
 import matplotlib.pyplot as plt
 
 from skimage import (filters, morphology, measure, exposure)
