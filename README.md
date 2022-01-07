@@ -1,4 +1,5 @@
 # DNA-Nanotube-Lengths
+### Project description
 The goal of this project is to automate length measurements of fluorescently labeled filaments, in this case DNA nanotubes, from epifluorescence micrographs using Python, and sort the resulting output files with bash. While the process of measuring filament characteristics is automated in this script, I recommend working in parallel with visual inspection of the images being processed using [FIJI](https://imagej.net/software/fiji/) [1], or an equivalent software. This allows for both confirmation that the results are representative of the images being processed, and for tuning of the input-parameters to optimize results. The script “nanotube_threshold.py” may but run on individual files one at a time, or run on all files in a given directory using the additional bash script “run_nanotubeThreshold_allFilesInDirectory.sh”. Further instruction on running the code is included below the project description and in “suggestedProjectProtocol.pdf”.
 
 The main script in this repository, "nanotube_threshold.py", allows the user to extract length measurements from fluorescence micrographs. This Python script is adaptable to process images even in the case of minor issues, such as uneven illumination across the image, small fluorescent smears, etc. Of course, I advocate for taking the highest quality images as possible during data acquisition, but sometimes stuff happens. The general protocol of the script is as follows: generate an approximation of the background for the image, subtract the background from the image, threshold and thin the result and remove any intersecting objects before measuring lengths. Further explanations can be found within the python file itself.
@@ -10,6 +11,7 @@ I’ve included a “suggestedProjectProtocol.pdf” with more detailed instruct
 This project relies on a number of Python packages, including [scikit-image](https://scikit-image.org) [2] and [pandas](https://pandas.pydata.org) [3] [4]. 
 Dependencies are listed in the ".dependencies" file. This project also uses ND2Reader from [nd2reader](https://github.com/rbnvrw/nd2reader). 
 
+### Citing and contact the author
 If you find this repository helpful or use it to generate published data, please cite it using the DOI certificate under "Releases" on the right-hand side menu. Questions can be sent to the author by email at klocke@ucr.edu
 
 ### Additional packages to install before running
